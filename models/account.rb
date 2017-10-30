@@ -9,7 +9,6 @@ class Account
   def initialize
     @balance = 0
     @statement = Statement.new
-
   end
 
   def deposit(amount)
