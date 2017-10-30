@@ -1,9 +1,7 @@
 require './models/account.rb'
 
 RSpec.describe Account do
-  before(:each) do
-    @account = Account.new
-  end
+  subject(:account) { described_class.new }
 
   # As a bank customer
   # A customer can make a deposit into their account
@@ -11,13 +9,13 @@ RSpec.describe Account do
 
   describe '#deposit' do
     it 'increases the balance' do
-      expect { @account.deposit(10) }.to change { @account.balance }.by(10)
+      expect { account.deposit(10) }.to change { account.balance }.by(10)
     end
 
     it 'increases the balance by the amount entered' do
-      expect { @account.deposit(10) }.to change { @account.balance }.by(10)
-      expect { @account.deposit(50) }.to change { @account.balance }.to(60)
-      expect { @account.deposit(100) }.to change { @account.balance }.to(160)
+      expect { account.deposit(10) }.to change { account.balance }.by(10)
+      expect { account.deposit(50) }.to change { account.balance }.to(60)
+      expect { account.deposit(100) }.to change { account.balance }.to(160)
     end
   end
 
@@ -26,14 +24,15 @@ RSpec.describe Account do
   # And decrease the balance of their bank account
 
   describe '#withdrawal' do
+    let(:statement) { double :statement }
     it 'reduces the balance' do
-      @account.deposit(100)
-      expect { @account.withdrawal(50) }.to change { @account.balance }.by(-50)
-      expect { @account.withdrawal(20) }.to change { @account.balance }.to(30)
+      account.deposit(100)
+      expect { account.withdrawal(50) }.to change { account.balance }.by(-50)
+      expect { account.withdrawal(20) }.to change { account.balance }.to(30)
     end
 
     it 'should raise an error if the account holder has insufficient funds' do
-      expect { @account.withdrawal(50) }.to raise_error('Insufficient funds')
+      expect { account.withdrawal(50) }.to raise_error('Insufficient funds')
     end
   end
 
@@ -43,12 +42,12 @@ RSpec.describe Account do
 
   describe '#balance' do
     it 'is empty when a new account is initialized' do
-      expect(@account.balance).to equal(0)
+      expect(account.balance).to equal(0)
     end
 
     it 'returns the balance to the user' do
-      @account.deposit(50)
-      expect(@account.balance).to equal(50)
+      account.deposit(50)
+      expect(account.balance).to equal(50)
     end
   end
 
@@ -58,7 +57,7 @@ RSpec.describe Account do
 
   describe '#datestamp' do
     it 'shows the data a transaction took place' do
-      expect(@account.timestamp).to eq(Time.now.strftime('%d/%m/%Y'))
+      expect(account.timestamp).to eq(Time.now.strftime('%d/%m/%Y'))
     end
   end
 end

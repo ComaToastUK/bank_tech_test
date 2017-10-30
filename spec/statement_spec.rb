@@ -1,13 +1,12 @@
 require './models/statement'
 
 RSpec.describe Statement do
-  before(:each) do
-    @statement = Statement.new
-  end
+  subject(:statement) { described_class.new }
+
 
   describe '#history' do
     it 'should contain a list of historical transactions' do
-      expect(@statement.history).to eq([])
+      expect(statement.history).to eq([])
     end
   end
 
@@ -16,8 +15,8 @@ RSpec.describe Statement do
       timestamp = Time.now.strftime('%d/%m/%Y')
       amount = 50
       balance = 1050
-      expect { @statement.add_to_statement(timestamp, amount, balance) }.to change { @statement.history }.to([['30/10/2017', 50, 1050]])
-      expect { @statement.add_to_statement(timestamp, -60, 990) }.to change { @statement.history }.to([['30/10/2017', 50, 1050], ['30/10/2017', -60, 990]])
+      expect { statement.add_to_statement(timestamp, amount, balance) }.to change { statement.history }.to([['30/10/2017', 50, 1050]])
+      expect { statement.add_to_statement(timestamp, -60, 990) }.to change { statement.history }.to([['30/10/2017', 50, 1050], ['30/10/2017', -60, 990]])
     end
   end
 
@@ -29,9 +28,9 @@ RSpec.describe Statement do
       timestamp2 = '30/10/2017'
       amount2 = -500
       balance2 = 550
-      @statement.add_to_statement(timestamp1, amount1, balance1)
-      @statement.add_to_statement(timestamp2, amount2, balance2)
-      expect { @statement.print_statement }.to output("  date  || credit || debit ||  balance   \n30/10/2017 ||  ||  || -500 || 550\n30/10/2017 || 50 ||  ||  || 1050\n").to_stdout
+      statement.add_to_statement(timestamp1, amount1, balance1)
+      statement.add_to_statement(timestamp2, amount2, balance2)
+      expect { statement.print_statement }.to output("  date  || credit || debit ||  balance   \n30/10/2017 ||  ||  || -500 || 550\n30/10/2017 || 50 ||  ||  || 1050\n").to_stdout
     end
   end
 end
