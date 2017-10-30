@@ -58,7 +58,7 @@ RSpec.describe Account do
 
   describe '#datestamp' do
     it 'shows the data a transaction took place' do
-      expect(@account.timestamp).to eq('30/10/2017')
+      expect(@account.timestamp).to eq(Time.now.strftime('%d/%m/%Y'))
     end
   end
 end

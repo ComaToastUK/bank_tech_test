@@ -7,7 +7,7 @@ class Statement
   end
 
   def add_to_statement(timestamp, amount, balance)
-    @history += [[timestamp, amount, balance]]
+    @history.push([timestamp, amount, balance])
   end
 
   def print_statement

@@ -23,7 +23,7 @@ RSpec.describe Statement do
 
   describe '#print_statement' do
     it 'should print a bank statement showing if transactions are in debit or credit' do
-      timestamp1 = Time.now.strftime('%d/%m/%Y')
+      timestamp1 = '30/10/2017'
       amount1 = 50
       balance1 = 1050
       timestamp2 = '30/10/2017'
