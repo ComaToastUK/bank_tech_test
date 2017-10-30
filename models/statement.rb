@@ -12,7 +12,7 @@ class Statement
 
   def print_statement
     @printer.statement_header
-    @history.each do |transaction|
+    @history.reverse.each do |transaction|
       if transaction[1] >= 0
         @printer.print_statement(transaction.insert(2, '||').join('|      |'))
       else

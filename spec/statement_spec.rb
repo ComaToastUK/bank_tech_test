@@ -30,7 +30,7 @@ RSpec.describe Statement do
       balance2 = 550
       statement.add_to_statement(timestamp1, amount1, balance1)
       statement.add_to_statement(timestamp2, amount2, balance2)
-      expect{ statement.print_statement }.to output("    Date    || Credit || Debit ||    Balance   \n30/10/2017|      |50|      ||||      |1050\n30/10/2017|      ||||      |-500|      |550\n").to_stdout
+      expect{ statement.print_statement }.to output("    Date    || Credit || Debit ||    Balance   \n30/10/2017|      ||||      |-500|      |550\n30/10/2017|      |50|      ||||      |1050\n").to_stdout
     end
   end
 end

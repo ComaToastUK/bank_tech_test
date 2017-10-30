@@ -8,5 +8,4 @@ RSpec.describe Printer do
       expect{ printer.statement_header }.to output("    Date    || Credit || Debit ||    Balance   \n").to_stdout
     end
   end
-
 end

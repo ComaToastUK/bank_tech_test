@@ -150,7 +150,6 @@
         2,
         null,
         null,
-        null,
         null
       ],
       "/Users/James/Projects/week10/Bank/spec/statement_spec.rb": [
@@ -192,6 +191,6 @@
         null
       ]
     },
-    "timestamp": 1509372372
+    "timestamp": 1509372805
   }
 }
