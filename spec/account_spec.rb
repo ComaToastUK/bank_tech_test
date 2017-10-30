@@ -33,7 +33,7 @@ RSpec.describe Account do
 
     it 'should raise an error if the account holder has insufficient funds' do
       account = Account.new
-      expect{account.withdrawal(50)}.to raise_error('Insufficient funds')
+      expect { account.withdrawal(50) }.to raise_error('Insufficient funds')
     end
   end
 
