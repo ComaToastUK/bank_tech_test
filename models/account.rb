@@ -24,6 +24,8 @@ class Account
     Time.now.strftime('%d/%m/%Y')
   end
 
+private
+
   def add_to_statement(timestamp, amount, balance)
     @statement.add_to_statement(timestamp, amount, balance)
   end

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-30T12:22:19+00:00">2017-10-30T12:22:19+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-30T13:03:58+00:00">2017-10-30T13:03:58+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.23
+         2.11
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>4</b> files in total.
-    <b>67</b> relevant lines. 
-    <span class="green"><b>67</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>75</b> relevant lines. 
+    <span class="green"><b>75</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,21 @@
       <tr>
         <td class="strong"><a href="#05ffa3d7d58b993051d57aa23438e92b76bd909e" class="src_link" title="models/account.rb">models/account.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>18</td>
-        <td>18</td>
+        <td>32</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
-        <td>3.4</td>
+        <td>3.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#b24219dbc2d541fe91474439134d6129d4b8a859" class="src_link" title="models/printer.rb">models/printer.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -78,6 +88,16 @@
         <td>29</td>
         <td>0</td>
         <td>1.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#5fd2316f3d64410325f796719ae8c589b3017526" class="src_link" title="spec/printer_spec.rb">spec/printer_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>12</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -111,8 +131,8 @@
     <h3>models/account.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -201,7 +221,7 @@
         <li class="covered" data-hits="6" data-linenumber="14">
           <span class="hits">6</span>
           
-          <code class="ruby">    add_to_statement( datestamp, amount, @balance)</code>
+          <code class="ruby">    add_to_statement(datestamp, amount, @balance)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -237,7 +257,7 @@
         <li class="covered" data-hits="2" data-linenumber="20">
           <span class="hits">2</span>
           
-          <code class="ruby">    add_to_statement( datestamp, amount, @balance)</code>
+          <code class="ruby">    add_to_statement(datestamp, amount, @balance)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -279,22 +299,71 @@
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
+          <code class="ruby">private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def add_to_statement(timestamp, amount, balance)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="28">
+        <li class="covered" data-hits="8" data-linenumber="30">
           <span class="hits">8</span>
           
           <code class="ruby">    @statement.add_to_statement(timestamp, amount, balance)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="b24219dbc2d541fe91474439134d6129d4b8a859">
+  <div class="header">
+    <h3>models/printer.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Printer</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
@@ -781,6 +850,97 @@
 </div>
 
       
+        <div class="source_table" id="5fd2316f3d64410325f796719ae8c589b3017526">
+  <div class="header">
+    <h3>spec/printer_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./models/printer.rb&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Printer do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#statement_header&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;lists the account columns&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      printer = Printer.new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(printer.statement_header).to eq(&#39;date || credit || debit || balance&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="5f712c4376e3f5ce9b4b5061ede0ddfb2d4f91eb">
   <div class="header">
     <h3>spec/statement_spec.rb</h3>
@@ -900,7 +1060,7 @@
         <li class="covered" data-hits="4" data-linenumber="18">
           <span class="hits">4</span>
           
-          <code class="ruby">      expect { statement.add_to_statement(timestamp, -60, 990) }.to change { statement.history }.to([[&#39;30/10/2017&#39;, 50, 1050],[&#39;30/10/2017&#39;, -60, 990]])</code>
+          <code class="ruby">      expect { statement.add_to_statement(timestamp, -60, 990) }.to change { statement.history }.to([[&#39;30/10/2017&#39;, 50, 1050], [&#39;30/10/2017&#39;, -60, 990]])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
