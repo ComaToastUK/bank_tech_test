@@ -30,6 +30,11 @@ RSpec.describe Account do
       expect { account.withdrawal(50) }.to change { account.balance }.by(-50)
       expect { account.withdrawal(20) }.to change { account.balance }.to(30)
     end
+
+    it 'should raise an error if the account holder has insufficient funds' do
+      account = Account.new
+      expect{account.withdrawal(50)}.to raise_error('Insufficient funds')
+    end
   end
 
   # As a bank customer
