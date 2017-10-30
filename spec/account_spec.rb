@@ -8,11 +8,14 @@ RSpec.describe Account do
   # And increase the balance of their bank account
 
   describe '#deposit' do
+    let(:statement) { double :statement }
     it 'increases the balance' do
+      allow(account).to receive(:statement).and_return(:statement)
       expect { account.deposit(10) }.to change { account.balance }.by(10)
     end
 
     it 'increases the balance by the amount entered' do
+      allow(account).to receive(:statement).and_return(:statement)
       expect { account.deposit(10) }.to change { account.balance }.by(10)
       expect { account.deposit(50) }.to change { account.balance }.to(60)
       expect { account.deposit(100) }.to change { account.balance }.to(160)
@@ -26,6 +29,7 @@ RSpec.describe Account do
   describe '#withdrawal' do
     let(:statement) { double :statement }
     it 'reduces the balance' do
+      allow(account).to receive(:statement).and_return(:statement)
       account.deposit(100)
       expect { account.withdrawal(50) }.to change { account.balance }.by(-50)
       expect { account.withdrawal(20) }.to change { account.balance }.to(30)

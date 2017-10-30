@@ -3,7 +3,6 @@ require './models/statement'
 RSpec.describe Statement do
   subject(:statement) { described_class.new }
 
-
   describe '#history' do
     it 'should contain a list of historical transactions' do
       expect(statement.history).to eq([])
