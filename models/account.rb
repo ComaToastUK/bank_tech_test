@@ -13,4 +13,8 @@ class Account
     @balance -= amount
   end
 
+  def timestamp
+    Time.now.strftime('%d/%m/%Y')
+  end
+
 end
