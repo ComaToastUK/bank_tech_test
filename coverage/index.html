@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-30T17:36:53+00:00">2017-10-30T17:36:53+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-30T17:54:15+00:00">2017-10-30T17:54:15+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -161,7 +161,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">class Account</code>
+          <code class="ruby">class Account # allows user to deposit and withdraw</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -221,7 +221,7 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def deposit(amount)</code>
+          <code class="ruby">  def deposit(amount) # add to account balance and store transaction in statement</code>
         </li>
       
         <li class="covered" data-hits="6" data-linenumber="15">
@@ -251,7 +251,7 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  def withdrawal(amount)</code>
+          <code class="ruby">  def withdrawal(amount)# remove from account balance and store transaction in statement</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="20">
@@ -329,7 +329,7 @@
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">  def in_debit?(amount)</code>
+          <code class="ruby">  def in_debit?(amount) # checks if the account is in credit or debit</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="33">
@@ -378,7 +378,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  def statement_header</code>
+          <code class="ruby">  def statement_header # header for bank statement</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="3">
@@ -402,7 +402,7 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  def print_statement(transaction)</code>
+          <code class="ruby">  def print_statement(transaction) # print out each transaction</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="7">
@@ -445,13 +445,13 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Statement</code>
+          <code class="ruby">class Statement # this stores transaction info and calls a printer</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :history, :print_history</code>
+          <code class="ruby">  attr_reader :history</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -463,7 +463,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize</code>
+          <code class="ruby">  def initialize #initialize empty arrays and printer</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="5">
@@ -499,7 +499,7 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">  def add_to_statement(timestamp, amount, balance)</code>
+          <code class="ruby">  def add_to_statement(timestamp, amount, balance) # push transactions to array</code>
         </li>
       
         <li class="covered" data-hits="12" data-linenumber="11">
@@ -523,7 +523,7 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def print_statement</code>
+          <code class="ruby">  def print_statement # prints the statement without affecting the original transaction data</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
