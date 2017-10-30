@@ -1,7 +1,7 @@
 require_relative 'statement'
 require_relative 'printer'
 
-class Account # allows user to deposit and withdraw
+class Account
   attr_reader :balance, :statement
 
   MINIMUM_BALANCE = 0
@@ -11,12 +11,12 @@ class Account # allows user to deposit and withdraw
     @statement = Statement.new
   end
 
-  def deposit(amount) # add to account balance and store transaction in statement
+  def deposit(amount)
     @balance += amount
     @statement.add_to_statement(timestamp, amount, @balance)
   end
 
-  def withdrawal(amount) # remove from account balance and store transaction in statement
+  def withdrawal(amount)
     raise 'Insufficient funds' if in_debit?(amount)
     @balance -= amount
     withdrawal_amount = amount * -1
@@ -29,7 +29,7 @@ class Account # allows user to deposit and withdraw
 
   private
 
-  def in_debit?(amount) # checks if the account is in credit or debit
+  def in_debit?(amount) 
     (@balance - amount) < MINIMUM_BALANCE
   end
 end

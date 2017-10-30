@@ -1,17 +1,17 @@
-class Statement # this stores transaction info and calls a printer
+class Statement
   attr_reader :history
 
-  def initialize # initialize empty arrays and printer
+  def initialize
     @history = []
     @printer = Printer.new
     @print_history = []
   end
 
-  def add_to_statement(timestamp, amount, balance) # push transactions to array
+  def add_to_statement(timestamp, amount, balance)
     @history.push([timestamp, amount, balance])
   end
 
-  def print_statement # prints the statement without affecting the original transaction data
+  def print_statement
     @printer.statement_header
     @history.each { |transaction| @print_history << transaction.clone }
     @print_history.reverse.each do |transaction|
