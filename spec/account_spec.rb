@@ -28,7 +28,7 @@ RSpec.describe Account do
     it 'reduces the balance' do
       account = Account.new
       account.deposit(100)
-      expect { account.withdrawal(50) }.to change { account.balance }.by(50)
+      expect { account.withdrawal(50) }.to change { account.balance }.by(-50)
       expect { account.withdrawal(20) }.to change { account.balance }.to(30)
     end
   end
