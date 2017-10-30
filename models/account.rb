@@ -1,4 +1,5 @@
 require_relative 'statement'
+require_relative 'printer'
 
 class Account
   attr_reader :balance, :statement
@@ -16,8 +17,9 @@ class Account
 
   def withdrawal(amount)
     @balance -= amount
+    withdraw = amount * -1
     datestamp = timestamp
-    add_to_statement(datestamp, amount, @balance)
+    add_to_statement(datestamp, withdraw, @balance)
   end
 
   def timestamp
