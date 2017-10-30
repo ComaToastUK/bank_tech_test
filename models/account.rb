@@ -1,7 +1,7 @@
 require_relative 'statement'
 
 class Account
-  attr_reader :balance
+  attr_reader :balance, :statement
 
   def initialize
     @balance = 0
@@ -10,17 +10,21 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    datestamp = timestamp
+    add_to_statement(datestamp, amount, @balance)
   end
 
   def withdrawal(amount)
     @balance -= amount
+    datestamp = timestamp
+    add_to_statement(datestamp, amount, @balance)
   end
 
   def timestamp
     Time.now.strftime('%d/%m/%Y')
   end
 
-  def add_to_statement
-    @statement.add_to_statement(timestamp)
+  def add_to_statement(timestamp, amount, balance)
+    @statement.add_to_statement(timestamp, amount, balance)
   end
 end
