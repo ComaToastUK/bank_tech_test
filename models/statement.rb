@@ -5,5 +5,5 @@ class Statement
   def initialize
     @history = []
   end
-
+  
 end
