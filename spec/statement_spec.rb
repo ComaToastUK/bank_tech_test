@@ -4,7 +4,8 @@ RSpec.describe Statement do
 
   describe '#history' do
     it 'should contain a list of historical transactions' do
-      expect( Statement.history ).to be(nil)
+      statement = Statement.new
+      expect( statement.history ).to eq([])
     end
   end
 end
