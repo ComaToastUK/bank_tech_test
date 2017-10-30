@@ -1,0 +1,34 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/James/Projects/week10/Bank/spec/account_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        4,
+        null,
+        null,
+        null
+      ],
+      "/Users/James/Projects/week10/Bank/models/account.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1509362159
+  }
+}
