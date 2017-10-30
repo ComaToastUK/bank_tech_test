@@ -21,7 +21,6 @@ class Account
   end
 
   def add_to_statement
-    @statement.add_to_statement(timestamp, )
+    @statement.add_to_statement(timestamp)
   end
-
 end
