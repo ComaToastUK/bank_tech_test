@@ -9,7 +9,6 @@
         null,
         null,
         null,
-        null,
         1,
         1,
         1,
@@ -51,6 +50,10 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -64,9 +67,12 @@
       ],
       "/Users/James/Projects/week10/Bank/models/account.rb": [
         1,
+        null,
+        1,
         1,
         null,
         1,
+        6,
         6,
         null,
         null,
@@ -82,9 +88,34 @@
         1,
         null,
         null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/James/Projects/week10/Bank/models/statement.rb": [
+        1,
+        null,
+        1,
+        6,
+        null,
+        null,
+        null
+      ],
+      "/Users/James/Projects/week10/Bank/spec/statement_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1509363777
+    "timestamp": 1509364472
   }
 }

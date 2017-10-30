@@ -1,8 +1,11 @@
+require_relative 'statement'
+
 class Account
   attr_reader :balance
 
   def initialize
     @balance = 0
+    @statement = Statement.new
   end
 
   def deposit(amount)
@@ -15,6 +18,10 @@ class Account
 
   def timestamp
     Time.now.strftime('%d/%m/%Y')
+  end
+
+  def add_to_statement
+
   end
 
 end
