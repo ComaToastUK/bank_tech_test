@@ -120,13 +120,16 @@
         1,
         1,
         1,
-        1,
+        2,
         null,
         null,
         null,
         null
       ],
       "/Users/James/Projects/week10/Bank/models/printer.rb": [
+        1,
+        null,
+        1,
         1,
         null,
         null
@@ -155,6 +158,6 @@
         null
       ]
     },
-    "timestamp": 1509368638
+    "timestamp": 1509369451
   }
 }
