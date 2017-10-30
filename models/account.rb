@@ -13,16 +13,14 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    datestamp = timestamp
-    add_to_statement(datestamp, amount, @balance)
+    @statement.add_to_statement(timestamp, amount, @balance)
   end
 
   def withdrawal(amount)
     raise 'Insufficient funds' if in_debit?(amount)
     @balance -= amount
-    withdraw = amount * -1
-    datestamp = timestamp
-    add_to_statement(datestamp, withdraw, @balance)
+    withdrawal_amount = amount * -1
+    @statement.add_to_statement(timestamp, withdrawal_amount, @balance)
   end
 
   def timestamp
@@ -30,10 +28,6 @@ class Account
   end
 
   private
-
-  def add_to_statement(timestamp, amount, balance)
-    @statement.add_to_statement(timestamp, amount, balance)
-  end
 
   def in_debit?(amount)
     (@balance - amount) < MINIMUM_BALANCE

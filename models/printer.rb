@@ -1,6 +1,6 @@
 class Printer
   def statement_header
-    puts '    Date    || Credit || Debit ||    Balance   '
+    puts '  date  || credit || debit ||  balance   '
   end
 
   def print_statement(transaction)

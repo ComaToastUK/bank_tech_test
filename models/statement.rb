@@ -14,9 +14,9 @@ class Statement
     @printer.statement_header
     @history.reverse.each do |transaction|
       if transaction[1] >= 0
-        @printer.print_statement(transaction.insert(2, '||').join('|      |'))
+        @printer.print_statement(transaction.insert(2, ' || ').join(' || '))
       else
-        @printer.print_statement(transaction.insert(1, '||').join('|      |'))
+        @printer.print_statement(transaction.insert(1, ' || ').join(' || '))
       end
     end
   end
