@@ -15,6 +15,7 @@ RSpec.describe Statement do
       amount = 50
       balance = 1050
       expect { statement.add_to_statement(timestamp, amount, balance) }.to change { statement.history }.to([['30/10/2017', 50, 1050]])
+      expect { statement.add_to_statement(timestamp, -60, 990) }.to change { statement.history }.to([['30/10/2017', 50, 1050],['30/10/2017', -60, 990]])
     end
   end
 end
