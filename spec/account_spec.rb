@@ -32,4 +32,28 @@ RSpec.describe Account do
       expect { account.withdrawal(20) }.to change { account.balance }.to(30)
     end
   end
+
+# As a bank customer
+# so that I can see how much money I heavyweight
+# I want to check my balance
+
+describe '#balance' do
+  it 'is empty when a new account is initialized' do
+    account = Account.new
+    expect( account.balance ).to equal(0)
+  end
+
+  it 'returns the balance to the user' do
+    account = Account.new
+    account.deposit(50)
+    expect( account.balance ).to equal(50)
+  end
+ end
+
+ describe '#datestamp' do
+   it 'shows the data a transaction took place' do
+   account = Account.new
+   expect( account.timestamp ).to eq("30/10/2017")
+  end
+ end
 end
