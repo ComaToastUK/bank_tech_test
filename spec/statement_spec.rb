@@ -1,4 +1,4 @@
-require './models/statement'
+require './lib/statement'
 
 RSpec.describe Statement do
   subject(:statement) { described_class.new }

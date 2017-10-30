@@ -1,4 +1,4 @@
-require './models/printer.rb'
+require './lib/printer.rb'
 
 RSpec.describe Printer do
   describe '#statement_header' do

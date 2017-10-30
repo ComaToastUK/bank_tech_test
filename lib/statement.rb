@@ -15,11 +15,8 @@ class Statement
     @printer.statement_header
     @history.each{|transaction| @print_history << transaction.clone}
     @print_history.reverse.each do |transaction|
-      if transaction[1] >= 0
-        @printer.print_statement(transaction.insert(2, ' || ').join(' || '))
-      else
-        @printer.print_statement(transaction.insert(1, ' || ').join(' || '))
-      end
+      transaction[1] >= 0 ? @printer.print_statement(transaction.insert(2, ' || ').join(' || ')) :
+      @printer.print_statement(transaction.insert(1, ' || ').join(' || '))
     end
     @print_history = []
   end
